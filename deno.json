@@ -1,6 +1,6 @@
 {
   "name": "@taras/graphql-tag",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "license": "MIT",
   "exports": "./mod.ts",
   "lint": {
@@ -15,7 +15,7 @@
     "lineWidth": 120
   },
   "tasks": {
-    "test": "deno test --no-check --allow-net --allow-read --allow-write --coverage=coverage",
+    "test": "deno test -A --coverage=coverage",
     "cov": "deno coverage coverage --lcov > coverage.lcov"
   },
   "imports": {
