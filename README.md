@@ -11,7 +11,7 @@ Create a GraphQL schema AST from template literal.
 
 ```ts
 import { buildASTSchema, graphql } from 'https://esm.sh/graphql@16.6.0'
-import { gql } from 'https://deno.land/x/graphql_tag/mod.ts'
+import gql from 'https://deno.land/x/graphql_tag/mod.ts'
 
 const typeDefs = gql`
   type Query {
