@@ -1,6 +1,5 @@
-import { parse } from './deps.ts'
-
-import type { DefinitionNode, DocumentNode, Location } from './deps.ts'
+import { parse } from 'graphql'
+import type { DefinitionNode, DocumentNode, Location } from 'graphql'
 
 // A map docString -> graphql document
 const docCache = new Map<string, DocumentNode>()
@@ -111,7 +110,7 @@ function parseDocument(source: string) {
 export function gql(
   literals: string | readonly string[],
   ...args: DocumentNode[]
-) {
+): DocumentNode {
   if (typeof literals === 'string') {
     literals = [literals]
   }
@@ -146,3 +145,5 @@ export function enableExperimentalFragmentVariables() {
 export function disableExperimentalFragmentVariables() {
   allowLegacyFragmentVariables = false
 }
+
+export default gql;

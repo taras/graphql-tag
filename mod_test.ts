@@ -1,6 +1,7 @@
-import { buildASTSchema } from 'https://esm.sh/graphql@16.6.0/utilities#='
-import { expect, it, run } from 'https://deno.land/x/tincan@1.0.2/mod.ts'
-import { gql } from './mod.ts'
+import { buildASTSchema } from 'graphql'
+import { expect } from 'expect';
+import { it } from 'testing';
+import gql from './mod.ts'
 
 const typeDefs = gql`
   type Query {
@@ -17,5 +18,3 @@ it('Creates a valid schema from AST', () => {
 
   expect(typeof schema === 'object').toBe(true)
 })
-
-run()
